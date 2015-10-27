@@ -44,8 +44,8 @@
       <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6324387">
-              <caret line="4071" column="33" selection-start-line="4071" selection-start-column="33" selection-end-line="4071" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.2951807">
+              <caret line="4038" column="34" selection-start-line="4038" selection-start-column="34" selection-end-line="4038" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -153,7 +153,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
+    <option name="x" value="65" />
     <option name="y" value="23" />
     <option name="width" value="1579" />
     <option name="height" value="977" />
@@ -406,7 +406,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="23" width="1579" height="977" extended-state="0" />
+    <frame x="65" y="23" width="1579" height="977" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21327014" sideWeight="0.50520056" order="3" side_tool="true" content_ui="tabs" />
@@ -823,8 +823,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6324387">
-          <caret line="4071" column="33" selection-start-line="4071" selection-start-column="33" selection-end-line="4071" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.2951807">
+          <caret line="4038" column="34" selection-start-line="4038" selection-start-column="34" selection-end-line="4038" selection-end-column="34" />
           <folding />
         </state>
       </provider>

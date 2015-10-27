@@ -4040,7 +4040,12 @@ angular.module('starter.controllers', ['pickadate'])
         $scope.register = function () {
             //
             var success = function (msg) {
-                //
+                if(JSON.parse(msg).result == 'success'){
+                    $ionicPopup.alert({
+                        title: '提示',
+                        template: '注册成功'+"图片路径为："+JSON.parse(msg).imagePath
+                    });
+                }
                 $scope.currentValue=msg;
                 $scope.$apply();
             };
@@ -4057,6 +4062,17 @@ angular.module('starter.controllers', ['pickadate'])
         $scope.verify = function () {
 
             var success = function (msg) {
+                if(JSON.parse(msg).result == 'success'){
+                    $ionicPopup.alert({
+                        title: '提示',
+                        template: '验证通过'
+                    });
+                } else{
+                    $ionicPopup.alert({
+                        title: '提示',
+                        template: JSON.parse(msg).result
+                    });
+                }
                 $scope.currentValue=msg;
                 $scope.$apply();
             };
@@ -4093,6 +4109,6 @@ angular.module('starter.controllers', ['pickadate'])
                 alert(error);
             };
 
-            face.search('linhehe47', success, failure);
+            face.search('jieyufeng', success, failure);
         };
     })
