@@ -1,0 +1,73 @@
+<ion-view view-title="签到考勤" class="viewbackgroundcolor" hide-back-button="true">
+
+    <ion-nav-buttons class="backbuttonsdiv" side="left" >
+        <div  style="clear: inherit;"ng-click="return()" >
+            <div style="float: left"><i class="ion-chevron-left"  ng-click="return()"></i></div>
+            <div style="float: right"><span class="backbuttons" ng-click="return()">返回</span></div>
+        </div>
+    </ion-nav-buttons>
+
+    <!--<ion-nav-buttons side="right">-->
+        <!--<i class="ion-ios-location-outline" style="font-size: 20px;margin-top: 6px; color: white;" ng-click="sign()"></i>-->
+        <!--<span style="font-size: 16px;margin-top: 6px; color: white;" ng-click="sign()">签到</span>-->
+    <!--</ion-nav-buttons>-->
+    <!--<div style="width:100%; height: 100vh;">-->
+        <!--<img src="img/xinkong.jpg" style="width:100%; height:100%; " />-->
+    <!--</div>-->
+    <ion-content class="padding">
+        <!--<baidu-map id="allmap" options="mapOptions" class="baidumap" style="width: 100%; height: 700px;display: block;"></baidu-map>-->
+
+        <div id="allmap" style="display: {{map_show}};width: 100%; min-height: 100%;"></div>
+        <div align="center" style="display: {{checkbutton_show}}">
+            <button class="button button-positive button-block"  ng-click="checkssid()">重新扫描</button>
+        </div>
+        <div align="center">
+            <button class="button {{sign_button_state}} button-block"  ng-click="sign()">{{sign_button_text}}</button>
+        </div>
+        <!--<img src="./img/pinpoint.png" ng-click="positioning()" style="display: {{show}};position: absolute;bottom: 50px;left: 10px;width: 38px;height: 38px">-->
+        <!--<div class="virtual_body" style="display: {{wifi_show}}">-->
+            <!--<div style="position: fixed;top: -50px;z-index: -1">-->
+                <!--<div class="radar-arm" style="position: absolute;left: {{radarwidth}}px;top: 50px;">-->
+                    <!--<img src="img/nPFQypy.png" ng-show="radar == 1">-->
+                <!--</div>-->
+                <!--<img class="photo" src="img/TOUX.jpg" style="width:100px;height:100px;border:2px solid #ffffff; border-radius: 50%;z-index: 20;position:relative;top: {{screenheight}}px;left: {{screenwidth}}px">-->
+            <!--</div>-->
+        <div align="center" style="margin-top: {{screenheight}}px;" ng-show="wifialert_show == 0"><h1 style="color:white;">检测不到签到热点</h1></div>
+        <div align="center" style="margin-top: {{screenheight}}px;" ng-show="wifialert_show == 1"><h1 style="color:white;font-size: 28px">检测到热点，可以签到了！</h1></div>
+        <div align="center" style="margin-top: {{screenheight}}px;" ng-show="wifialert_show == 2"><h1 style="color:white;">您还未签到</h1></div>
+        <div align="center" style="margin-top: {{screenheight}}px;" ng-show="wifialert_show == 3"><h1 style="color:white;">您已签到</h1></div>
+
+            <div align="center"  style="margin-top:10px;display: {{button_show}}">
+                <button class="button {{open_button_state}} ion-wifi" ng-click="open_wifi()" style="margin-right: 10px"  >
+                    开启签到热点
+                </button>
+                <button class="button {{close_button_state}} ion-power" ng-click="close_wifi()" style="margin-left: 10px">
+                    关闭签到热点
+                </button>
+            </div>
+            <!--<div ng-if="show" class="wifi_div" style="position:absolute;left:{{math_j}}vh;top:{{math_i}}vh;"><img src="img/back.png" style="width: 100%;height: 100%;border-radius: 50%;border: 2px solid #369FAB"></div>-->
+        <!--</div>-->
+
+        <!--声纹识别-->
+        <script id="voice_verify" type="text/ng-template">
+            <div class="modal" >
+
+                <ion-header-bar class="" style="background-color: transparent">
+                    <h1 class="title" style="color:white;">声纹验证</h1>
+                    <button class="button button-icon icon ion-ios-close" style="color:white;" ng-click="close()"></button>
+                </ion-header-bar>
+                <ion-content class="padding">
+                    <div align="center">
+                        <input type="text" style="text-align: center;"  ng-model="text" />
+                        <input type="text" style="text-align: center;font-weight: bolder"  ng-model="currentValue" />
+                    </div>
+                    <!--<button class="button" ng-click="getPassword()">获取密码</button>-->
+                    <!--<button class="button button-positive" ng-click="register()">注册</button>-->
+                    <button class="button button-positive button-block" ng-click="verify()">验证</button>
+                    <!--<button class="button button-positive" ng-click="delete()">删除</button>-->
+                </ion-content>
+            </div>
+        </script>
+
+    </ion-content>
+</ion-view>
